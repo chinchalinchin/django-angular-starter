@@ -10,6 +10,6 @@ if [ "$ENVIRONMENT" == "container" ]
 then
     timestamped_print '--> Collecting Static Files' $SCRIPT_NAME
     python manage.py collectstatic --noinput
-    timestamped_print '--> Binding WSGI App to Gunicorn On 0.0.0.0:8000 <' $SCRIPT_NAME 
+    timestamped_print '--> Binding WSGI App to Gunicorn On 0.0.0.0:8000' $SCRIPT_NAME 
     gunicorn core.wsgi:application --bind=0.0.0.0 --workers 3
 fi
