@@ -18,9 +18,10 @@ class DebugMiddleware:
             for key, value in request.GET.items():
                 self.logger.info('>> Request Parameter %s = %s', key, value)
 
-            for key, value in request.session.items():
-                if value is not None:
-                    self.logger.info('>>> Session Variable %s = %s', key, value)
+            if hasattr(request, "session"):
+                for key, value in request.session.items():
+                    if value is not None:
+                        self.logger.info('>>> Session Variable %s = %s', key, value)
 
             if hasattr(request, 'user'):
                 self.logger.info('>>>> Session User: %s', request.user)
