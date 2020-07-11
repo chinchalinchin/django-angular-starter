@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-[Docker]()
-[Git for Windows]()
+[Docker](https://docs.docker.com/get-docker/)<br>
+[Git for Windows](https://git-scm.com/download/win)<br>
 
 ## Steps
 
