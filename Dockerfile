@@ -16,10 +16,10 @@ RUN pip install -r requirements.txt
 
 ## FRONTEND DEPENDENCIES
 WORKDIR /home/frontend/
-COPY /frontend/  /home/frontend/
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     && apt-get install -y nodejs
 RUN npm install -g @angular/cli@8.2.0
+COPY /frontend/  /home/frontend/
 RUN npm install
 RUN ng build --prod --output-hashing none
 
