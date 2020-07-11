@@ -1,1 +1,3 @@
 *.pyc
+chinchalinchin/static/*
+frontend/node_modules/*
