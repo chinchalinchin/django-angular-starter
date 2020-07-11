@@ -33,4 +33,4 @@ Ensure the <i>core</i> app within the Django project routes requests to the <i>n
 
 5. Open the <i>angular.json</i> within generated project and set <b>architect.build.options.outpathPath</b> == <i>"/../chinchalinchin/static/"</i>. This will ensure the Angular build files are outputted into the static directories configured to be served within the Django web application.
 
-[Application >](docs/APPLICATION.md)
+[Application >](APPLICATION.md)

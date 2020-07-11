@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'chinchalinchin productions';
+  subtitle = 'a django-angular web application'
 }

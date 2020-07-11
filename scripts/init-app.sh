@@ -3,6 +3,7 @@ SCRIPT_NAME='init-app.sh'
 source "$SCRIPT_DIR/util/logging.sh"
 
 # TODO: Migrations
+
 timestamped_print '> Debugging Django Settings <' $SCRIPT_NAME
 python debug.py
 
