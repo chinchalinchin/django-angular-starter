@@ -1,0 +1,4 @@
+<div class="btn-group-vertical" role="group">
+    <button *ngFor = "let item of menu | keyvalue" 
+        type="button" class="btn btn-default">{{item.value}}</button>
+</div>

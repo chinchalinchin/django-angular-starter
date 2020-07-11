@@ -6,6 +6,8 @@ services:
             - "8000:8000"
         links:
             - "database"
+        depends_on: 
+            - "database"
         env_file:
             - local.env
         command: ["wait-for-it", "database:5432", "--", "bash", "./init-app.sh"]
