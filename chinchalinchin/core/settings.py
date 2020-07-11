@@ -5,7 +5,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 APP_ENV = os.getenv('ENVIRONMENT')
 
-if APP_ENV == 'cloud':
+if APP_ENV == 'container':
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -26,6 +26,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'navigation.apps.NavigationConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

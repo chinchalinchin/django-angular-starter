@@ -1,4 +1,5 @@
 # TODO: Migrations
+python debug.py
 
 if [ "$ENVIRONMENT" == "container" ]
 then

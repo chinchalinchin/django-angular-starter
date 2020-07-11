@@ -3,12 +3,12 @@ services:
     web:
         build: ./
         ports:
-            - "8000":"8000"
+            - "8000:8000"
         links:
             - "database"
         env_file:
             - local.env
-        command: ["wait-for-it.sh", "database:5432", "--", "bash", "./init-app.sh"]
+        command: ["wait-for-it", "database:5432", "--", "bash", "./init-app.sh"]
     database:
         image: "postgres:latest"
         ports: 
