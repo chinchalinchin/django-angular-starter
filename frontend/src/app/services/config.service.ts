@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { menu } from '../../environments/configs/application';
+import { menu } from '../../environments/config/application';
 
 @Injectable({
   providedIn: 'root'
