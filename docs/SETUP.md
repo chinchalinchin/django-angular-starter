@@ -11,8 +11,8 @@ Below are the steps taken to setup this project. The code in this repository is 
 
 1. Set up Django Project and a Django app within project
 
-> django-admin startproject chinchalinchin<br>
-> cd chinchalinchin<br>
+> django-admin startproject app<br>
+> cd app<br>
 > django-admin startapp navigation<br>
 
 2. Configure Django settings. <b>DATABASES</b> should be set to <i>django.db.backends.postgresql</i> and the credentials configured through environment variables. The web application is orchestrated in <i>docker-compose</i> with a postgresql database image. The credentials are loaded in through environment variables set in the <i>local.env</i> file. Both images, the Django app and the database image, read in the database credentials through this file. 

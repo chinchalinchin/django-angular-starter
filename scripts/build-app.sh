@@ -2,10 +2,10 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 SCRIPT_NAME='build-app.sh'
 source "$SCRIPT_DIR/util/logging.sh"
 
-if [ -d "$SCRIPT_DIR/../chinchalinchin/static/" ]
+if [ -d "$SCRIPT_DIR/../app/static/" ]
 then
     timestamped_print '--> Cleaning \e[4m/static/\e[0m Directory' $SCRIPT_NAME
-    rm -r $SCRIPT_DIR/../chinchalinchin/static/
+    rm -r $SCRIPT_DIR/../app/static/
 fi
 if [ -d "$SCRIPT_DIR/../frontend/node_modules/" ]
 then
