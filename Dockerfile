@@ -2,16 +2,16 @@ FROM python:3.7.7-slim-stretch
 
 # DIRECTORY STRUCTURE
 WORKDIR /home/
-RUN mkdir /chinchalinchin
-WORKDIR /home/chinchalinchin/
+RUN mkdir /app
+WORKDIR /home/app/
 RUN mkdir core && mkdir navigation && mkdir frontend && mkdir util
 
 # APP DEPENDENCIES
 RUN apt-get update -y && apt-get install -y curl wait-for-it
 
 ## BACKEND DEPENDENCIES
-COPY /chinchalinchin/requirements.txt /home/chinchalinchin/requirements.txt
-WORKDIR /home/chinchalinchin/
+COPY /app/requirements.txt /home/app/requirements.txt
+WORKDIR /home/app/
 RUN pip install -r requirements.txt
 
 ## FRONTEND DEPENDENCIES
@@ -24,14 +24,14 @@ RUN npm install
 RUN ng build --prod --output-hashing none
 
 ## BACKEND APPLICATION
-COPY /chinchalinchin/core/ /home/chinchalinchin/core/
-COPY /chinchalinchin/navigation/ /home/chinchalinchin/navigation/
-COPY /chinchalinchin/manage.py /home/chinchalinchin/manage.py
-COPY /chinchalinchin/debug.py /home/chinchalinchin/debug.py
+COPY /app/core/ /home/app/core/
+COPY /app/navigation/ /home/app/navigation/
+COPY /app/manage.py /home/app/manage.py
+COPY /app/debug.py /home/app/debug.py
 
 # START UP SCRIPTS
-WORKDIR /home/chinchalinchin/
-COPY /scripts/init-app.sh /home/chinchalinchin/init-app.sh
-COPY /scripts/util/logging.sh /home/chinchalinchin/util/logging.sh
+WORKDIR /home/app/
+COPY /scripts/init-app.sh /home/app/init-app.sh
+COPY /scripts/util/logging.sh /home/app/util/logging.sh
 
 CMD ["bash", "./init-app.sh"]
