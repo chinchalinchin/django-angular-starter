@@ -10,6 +10,16 @@ services:
             - "database"
         env_file:
             - ./env/container.env
+        volumes:
+            - type: bind
+              source: ./app
+              target: /home/app
+            - type: bind
+              source: ./frontend
+              target: /home/frontend
+            - type: bind
+              source: ./scripts
+              target: /home/scripts
         command: ["wait-for-it", "database:5432", "--", "bash", "./bootstrap.sh","container"]
     database:
         image: "postgres:latest"
@@ -17,3 +27,5 @@ services:
             - "5432:5432"
         env_file:
             - ./env/container.env  
+
+    
