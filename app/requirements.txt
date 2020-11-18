@@ -6,7 +6,7 @@ whitenoise==5.1.0
 # Database Dependencies
 psycopg2-binary==2.8.5
 
-# Http Dependencies
+# HTTP Dependencies
 requests>=2.20.0
 django-cors-headers==3.4.0
 django-referrer-policy==1.0.0

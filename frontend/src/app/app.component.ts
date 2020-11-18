@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'chinchalinchin productions';
-  subtitle = 'a django-angular web application'
+  title = 'django-angular starter template';
+  subtitle = 'angular main component'
 }
