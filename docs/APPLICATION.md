@@ -4,10 +4,18 @@ This project can be run locally, but it has also been containerized for ease of 
 
 <b>Local Development<b><br>
 <i>Required</i>
-- [NodeJs]()
-- [Python]()<br>
+
+- [Python](https://www.python.org/downloads/)
+- [NodeJs](https://nodejs.org/en/download/)<br><br>
+
 <i>Optional, but highly recommended<i>
-- [Docker]()
+
+- [Docker](https://www.docker.com/products/docker-desktop)
+- [Git For Windows](https://git-scm.com/download/win)
+
+<i>Optional, but recommended for local development</i>
+
+- [PostgreSQL](https://www.postgresql.org/download/)
 
 ### Starting the Application
 

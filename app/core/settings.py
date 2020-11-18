@@ -5,6 +5,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 APP_ENV = os.environ.setdefault('ENVIRONMENT','local')
 
+# Configure datasource here
 if APP_ENV == 'container':
     DATABASES = {
     'default': {
@@ -16,6 +17,10 @@ if APP_ENV == 'container':
         'PASSSWORD': os.getenv('POSTGRES_PASSWORD')
     }
 }
+elif APP_ENV == 'local':
+    # TODO: Configure local database connection here, if desired
+    pass
+
 
 SECRET_KEY = 'i46xk72z0=*c0kvx%0ll3v#&=1!4mw24ok&msmv(dh8c9wokpb'
 
