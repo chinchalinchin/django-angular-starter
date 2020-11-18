@@ -31,6 +31,6 @@ Ensure the <i>core</i> app within the Django project routes requests to the <i>n
 
 > ng new frontend
 
-5. Open the <i>angular.json</i> within generated project and set <b>architect.build.options.outpathPath</b> == <i>"/../app/static/"</i>. This will ensure the Angular build files are outputted into the static directories configured to be served within the Django web application.
+5. Open the <i>angular.json</i> within generated project and set <b>architect.build.options.outpathPath</b> == <i>"/../app/static/"</i>. This will ensure the Angular build files are outputted into the static directories configured to be served within the Django HTML templates found within the <i>/app/navigation/templates/</i> directory.
 
 [Application >](APPLICATION.md)

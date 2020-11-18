@@ -9,11 +9,11 @@ services:
         depends_on: 
             - "database"
         env_file:
-            - local.env
+            - app.env
         command: ["wait-for-it", "database:5432", "--", "bash", "./init-app.sh"]
     database:
         image: "postgres:latest"
         ports: 
             - "5432:5432"
         env_file:
-            - local.env    
+            - app.env    
