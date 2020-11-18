@@ -1,3 +1,5 @@
+[<< ReadMe](../README.md) | [Application >>](APPLICATION.md)
+
 # Setup
 
 ## Prerequisites

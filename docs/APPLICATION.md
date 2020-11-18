@@ -1,3 +1,5 @@
+[<< Setup](SETUP.md) | [Environment >>](ENVIRONMENT.md)
+
 # Starting the Application
 
 ## Local Development

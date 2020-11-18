@@ -1,3 +1,5 @@
+[<< Application](APPLICATION.md) | [Appendix >>](ENVIRONMENT.md)
+
 # Application Environment
 
 The <i>app.env</i> file located in the project root directory defines several environment variables that need to be set in order for the application to run, either locally or in a container. The Django app requires these variables to populate various settings in the <i>/app/core/settings.py</i> configuration file. In addition, the Dockerfile uses several of the variables to control the dependency versions. Every <i>app.env</i> should contain the following variables,
@@ -36,3 +38,5 @@ If running locally with a local database, you should always load in your environ
 > python manage.py runserver
 
 so the <i>/app/core/settings.py</i> database connection properties can be configured properly. By contrasting, when running in a Dockerized environment, these variables are automatically loaded in the container environment through the <i>docker-compose.yml</i>'s <b>env_file<b> attribute.
+
+[<< Application](APPLICATION.md) | [Appendix >>](ENVIRONMENT.md)
