@@ -10,7 +10,7 @@ then
 else
     touch $SCRIPT_DIR/../env/local.env
     cp $SCRIPT_DIR/../env/.sample.env $SCRIPT_DIR/../env/local.env
-    log 'Please configure the \e[4mlocal.env\e[0m file and then re-invoke this script. See documentation for more information' $SCRIPT_NAME
+    log 'Please configure the \e[3mlocal.env\e[0m file and then re-invoke this script. See documentation for more information' $SCRIPT_NAME
 fi
 
 # TODO: check if node, angular cli and python are installed
