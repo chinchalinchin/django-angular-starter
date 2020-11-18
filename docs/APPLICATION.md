@@ -1,25 +1,6 @@
-### Prerequisites
+# Starting the Application
 
-This project can be run locally, but it has also been containerized for ease of development. See below for the links to the necessary software needed to build and run the application. 
-
-<b>Local Development<b><br>
-<i>Required</i>
-
-- [Python](https://www.python.org/downloads/)
-- [NodeJs](https://nodejs.org/en/download/)<br><br>
-
-<i>Optional, but highly recommended<i>
-
-- [Docker](https://www.docker.com/products/docker-desktop)
-- [Git For Windows](https://git-scm.com/download/win)
-
-<i>Optional, but recommended for local development</i>
-
-- [PostgreSQL](https://www.postgresql.org/download/)
-
-### Starting the Application
-
-## Local Development Mode
+## Local Development
 
 First, you must ensure the frontend has been built and the artifacts deposited in the <i>/static/</i> folder in the backend. To do this, run the command,
 
@@ -31,9 +12,9 @@ Once the Angular artifacts are outputted into the <i>/app/static/</i> folder, th
 
 > python manage.py runserver
 
-Keep in mind, the application when running in development mode on your local host has not been configured to connect to any datasources or databases. The application has been pre-configured to run with a <b>postgres</b> database image in a containerized environment, which enhances the application's functionality. Because of this, local development mode is only recommended for simple tasks, such as frontend testing, debugging, etc. 
+Keep in mind, the application when running in development mode on your local host has not been configured to connect to any datasources or databases. The application has been pre-configured to run with a <b>postgres</b> database image in a containerized environment, which enhances the application's functionality. Because of this, local development mode is only recommended for simple tasks, such as frontend testing, debugging, etc, unless you intend to setup a SQL server on your local machine.
 
-## Using Docker
+## Docker Development 
 
 The <i>Dockerfile</i> and <i>docker-compose</i> found in the root folder of this project provide a containerized version of this application that can be built with a single command, assuming you have installed <b>Docker</b>. Run from the root directory either,
 

@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "../app/static/frontend",
-            "index": "", // App Loaded Through Django Template
+            "index": "", // App Loaded Through Pre-Configured Django Template
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
