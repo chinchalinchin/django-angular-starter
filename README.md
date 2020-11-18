@@ -6,4 +6,5 @@ This is a quick start application pre-configured to deploy a python Django web a
 
 - [Setup](docs/SETUP.md)<br>
 - [Application](docs/APPLICATION.md)<br>
+- [Environment](docs/ENVIRONMENT.md)<br>
 - [Appendix](docs/APPENDIX.md)
