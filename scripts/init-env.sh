@@ -8,5 +8,7 @@ then
     source $SCRIPT_DIR/../app.env
     set +o allexport
 else
-    log 'Please create and configure the \e[4mapp.env\e[0m file' $SCRIPT_NAME
+    cd $SCRIPT_DIR/..
+    touch app.env
+    log 'Please configure the \e[4mapp.env\e[0m file. See documentation for more information' $SCRIPT_NAME
 fi

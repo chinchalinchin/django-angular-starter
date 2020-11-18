@@ -4,6 +4,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 APP_ENV = os.environ.setdefault('ENVIRONMENT','local')
+SECRET_KEY = os.environ.setdefault('SECRET_KEY', 'xxxx')
 
 # Configure datasource here
 if APP_ENV == 'container':
