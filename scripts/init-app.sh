@@ -2,7 +2,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 SCRIPT_NAME='init-app.sh'
 source "$SCRIPT_DIR/util/logging.sh"
 
-# TODO: Migrations
+python manage.py migrate
 
 timestamped_print '> Debugging Django Settings <' $SCRIPT_NAME
 python debug.py
