@@ -4,13 +4,13 @@
 
 This project can be run locally, but it has also been containerized for ease of development. See below for the links to the necessary software needed to build and run the application. 
 
-<b>Local Development<b><br>
+<b>Local Development</b><br>
 <i>Required</i>
 
 - [Python](https://www.python.org/downloads/)
-- [NodeJs](https://nodejs.org/en/download/)<br><br>
+- [NodeJs](https://nodejs.org/en/download/)
 
-<i>Optional, but highly recommended<i>
+<i>Optional, but highly recommended</i>
 
 - [Docker](https://www.docker.com/products/docker-desktop)
 - [Git For Windows](https://git-scm.com/download/win)
@@ -45,4 +45,4 @@ Ensure the <i>core</i> app within the Django project routes requests to the <i>n
 
 5. Open the <i>angular.json</i> within generated project and set <b>architect.build.options.outpathPath</b> == <i>"/../app/static/"</i>. This will ensure the Angular build files are outputted into the static directories configured to be served within the Django HTML templates found within the <i>/app/navigation/templates/</i> directory.
 
-[Application >](APPLICATION.md)
+[<< ReadMe](../README.md) | [Application >>](APPLICATION.md)

@@ -15,5 +15,7 @@ services:
         image: "postgres:latest"
         ports: 
             - "5432:5432"
-        env_file:
-            - app.env    
+        environment:
+            - POSTGRES_DB=app_db
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=root   

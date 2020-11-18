@@ -5,6 +5,6 @@
 ### DESCRIPTION
 ## Prints the inputted message with the current time and with
 ## text formatting. 
-timestamped_print(){
-    echo -e "\e[92m$(date +"%r")\e[0m: \e[4;32m$2\e[0m : $1"
+log(){
+    echo -e "\e[92m$(date +"%r")\e[0m: \e[4;32m$2\e[0m : >> $1"
 }

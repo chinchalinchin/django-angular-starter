@@ -10,11 +10,11 @@ if APP_ENV == 'container':
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
+        'HOST': os.getenv('POSTGRES_HOST'),
         'NAME': os.getenv('POSTGRES_DB'),
+        'PORT': os.getenv('POSTGRES_PORT'),
         'USER': os.getenv('POSTGRES_USER'),
-        'PASSSWORD': os.getenv('POSTGRES_PASSWORD')
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD')
     }
 }
 elif APP_ENV == 'local':
