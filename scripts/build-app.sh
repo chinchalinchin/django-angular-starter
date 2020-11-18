@@ -16,7 +16,7 @@ fi
 timestamped_print '>> Removing Running Containers' $SCRIPT_NAME
 docker-compose down
 
-formatted_print '>> Clearing Docker Cache' $SCRIPT_NAME
+timestamped_print '>> Clearing Docker Cache' $SCRIPT_NAME
 docker system prune -f
 
 timestamped_print '--> Building Application Image' $SCRIPT_NAME

@@ -25,6 +25,7 @@ RUN curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - \
     && apt-get install -y nodejs
 RUN npm install -g @angular/cli@${ANGULAR_VERSION}
 COPY /frontend/  /home/frontend/
+RUN npm install
 RUN ng build --prod --output-hashing none
 
 ## BACKEND APPLICATION

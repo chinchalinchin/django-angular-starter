@@ -43,5 +43,5 @@ The <i>/scripts/init-app.sh</i> executes inside the container, once the applicat
 
 Note: both the web application container and <b>postgres</b> container are configured by the variables defined in the <i>app.env</i> file. 
 
-[< Setup](SETUP.md)
+[<< Setup](SETUP.md) | [Appendix >>](APPENDIX.md)
 
