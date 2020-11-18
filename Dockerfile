@@ -1,4 +1,9 @@
+# VERSION CONTROL
 FROM python:3.7.7-slim-stretch
+ENV ANGULAR_VERSION=10.2
+ENV NODE_VERSION=14
+# TODO: Figure out how to pass in versions through the ARG command and docker-compose.yml 
+#       used in conjunction.
 
 # DIRECTORY STRUCTURE
 WORKDIR /home/
@@ -16,11 +21,10 @@ RUN pip install -r requirements.txt
 
 ## FRONTEND DEPENDENCIES
 WORKDIR /home/frontend/
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+RUN curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - \
     && apt-get install -y nodejs
-RUN npm install -g @angular/cli@8.2.0
+RUN npm install -g @angular/cli@${ANGULAR_VERSION}
 COPY /frontend/  /home/frontend/
-RUN npm install
 RUN ng build --prod --output-hashing none
 
 ## BACKEND APPLICATION
