@@ -13,8 +13,17 @@ then
     rm -r $SCRIPT_DIR/../frontend/node_modules/
 fi
 
+timestamped_print '>> Removing Running Containers' $SCRIPT_NAME
+docker-compose down
+
+formatted_print '>> Clearing Docker Cache' $SCRIPT_NAME
+docker system prune -f
+
 timestamped_print '--> Building Application Image' $SCRIPT_NAME
 docker-compose build
+
+timestamped_print '>> Deleting Dangling Images' $SCRIPT_NAME
+docker rmi $(docker images --filter "dangling=true" -q)
 
 timestamped_print '--> Orchestrating Images' $SCRIPT_NAME
 docker-compose up
