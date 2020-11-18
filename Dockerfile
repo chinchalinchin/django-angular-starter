@@ -36,7 +36,7 @@ COPY /app/debug.py /home/app/debug.py
 
 # START UP SCRIPTS
 WORKDIR /home/app/
-COPY /scripts/init-app.sh /home/app/init-app.sh
+COPY /scripts/bootstrap.sh /home/app/bootstrap.sh
 COPY /scripts/util/logging.sh /home/app/util/logging.sh
 
-CMD ["bash", "./init-app.sh"]
+CMD ["bash", "./bootstrap.sh", "container"]

@@ -24,13 +24,13 @@ The <i>Dockerfile</i> and <i>docker-compose</i> found in the root folder of this
 
 Or to clean up the application beforehand (i.e. remove <i>/static/</i> files and <i>/node_modules/</i> dependencies left over from development, clear the Docker cache, remove any dangling images from previous failed builds, etc.) and build a fresh image, invoke the BASH script from the project root directory,
 
-> /scripts/build-app.sh
+> /scripts/build-container.sh
 
 This will call <i>docker-compose</i>, but also perform some side-tasks that prevent your computer from blowing up. 
 
 The <i>docker-compose.yml</i> builds and runs an image of a Django web application and networks it with a <b>postgres</b> container. During the build of the web application image, the Angular frontend application is built and stored within the <i>/static/</i> directory of the Django app. <b>Gunicorn</b>, a python web server, wraps the WSGI application and serves the static files. The web application container is exposed locally at <i>localhost:8000</i>. 
 
-The <i>/scripts/init-app.sh</i> executes inside the container, once the application and frontend have been built. The execution can be configured by editing the environment variable <b>ENVIRONMENT</b> and the script, accordingly. The script currently initializes the application so that requests to <i>localhost</i> are routed into the container. In the production, this script should include the correct initialization procedure for whatever environment the application is in, i.e. which cloud.
+The <i>/scripts/bootstrap.sh</i> executes inside the container, once the application and frontend have been built. The execution can be configured by editing the environment variable <b>ENVIRONMENT</b> and the script, accordingly. The script currently initializes the application so that requests to <i>localhost</i> are routed into the container. In the production, this script should include the correct initialization procedure for whatever environment the application is in, i.e. which cloud.
 
 Note: both the web application container and <b>postgres</b> container are configured by the variables defined in the <i>app.env</i> file. 
 
