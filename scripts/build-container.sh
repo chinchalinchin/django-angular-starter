@@ -23,5 +23,4 @@ docker-compose build
 log 'Deleting Dangling Images' $SCRIPT_NAME
 docker rmi $(docker images --filter "dangling=true" -q)
 
-log 'Orchestrating Images' $SCRIPT_NAME
-docker-compose up
+log 'Application Image Built. Run \e[3mdocker-compose\e[0m To Start Application Server' $SCRIPT_NAME

@@ -6,25 +6,14 @@ source "$SCRIPT_DIR/util/logging.sh"
     # local: start the application in development mode
     # container: start the application in production mode
 
-# PRE-APPLICATION CONFIGURATION
 if [ "$1" == "local" ]
 then
     log 'Initializing Local Environment' $SCRIPT_NAME
     source $SCRIPT_DIR/init-local-env.sh
-
-    cd $SCRIPT_DIR/../frontend/
-    log "Navigating to Angular Project Root: $(pwd)" $SCRIPT_NAME
-
-    log 'Installing Frontend Dependencies' $SCRIPT_NAME
-    npm install
-
 fi
 
-if [ "$1" == "container" ]
-then 
-    cd $SCRIPT_DIR/../frontend/
-    log "Navigating to Angular Project Root: $(pwd)" $SCRIPT_NAME
-fi
+cd $SCRIPT_DIR/../frontend/
+log "Navigating to Angular Project Root: $(pwd)" $SCRIPT_NAME
 
 # APPLICATION BUILD
 log 'Compiling Angular Artifacts' $SCRIPT_NAME
