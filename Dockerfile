@@ -21,8 +21,13 @@ WORKDIR /home/frontend/
 RUN npm install -g @angular/cli@${ANGULAR_VERSION}
 RUN npm install
 
-# MOUNT VOLUMES
-VOLUME /home/app /home/frontend /home/scripts
+# COPY PROJECT
+COPY /app /home/app 
+COPY /scripts /home/scripts
+COPY /frontend /home/frontend 
+
+WORKDIR /home/frontend
+RUN ng build --prod --output-hashing none
 
 # BOOTSTRAP
 WORKDIR /home/scripts/

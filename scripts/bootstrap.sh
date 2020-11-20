@@ -7,6 +7,7 @@ SCRIPT_DES="This script is designed to start up the application server \e[3minsi
    collects all of the static files to be served by the \e[2mgunicorn\e[0m web ${nl}\
    server, and migrates Django's models to the database connection ${nl}\
    configured in the \e[3mcontainer.env\e[0m environment file."
+
 source "$SCRIPT_DIR/util/logging.sh"
 
 if [ "$1" == "--help" ] || [ "$1" == "--h" ] || [ "$1" == "-help" ] || [ "$1" == "-h" ]
@@ -17,20 +18,14 @@ else
     ########################################################
     ## PRE-DEPLOYMENT CONTAINER TASKS 
     #######################################################
-    cd $SCRIPT_DIR/../frontend/
-    log "Navigating to Angular Project Root: $(pwd)" $SCRIPT_NAME
-
-    log 'Transpiling Angular Artifacts' $SCRIPT_NAME
-    ng build --prod --output-hashing none
-    
     cd $SCRIPT_DIR/../app/
     log "Navigating To Django Project Root: $(pwd)" $SCRIPT_NAME
 
     log 'Collecting Static Files' $SCRIPT_NAME
     python manage.py collectstatic --noinput
 
-    log 'Migrating Models To Database' $SCRIPT_NAME
-    python manage.py migrate
+    # log 'Migrating Models To Database' $SCRIPT_NAME
+    # python manage.py migrate
 
     log 'Debugging Django Settings' $SCRIPT_NAME
     python debug.py
