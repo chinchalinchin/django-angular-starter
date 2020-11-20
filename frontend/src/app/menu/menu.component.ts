@@ -8,6 +8,7 @@ import { ConfigService } from '../services/config.service';
 export class MenuComponent implements OnInit {
 
   public menu; 
+  public test : String = "testing new docker script";
 
   constructor(private configService: ConfigService) { 
   }

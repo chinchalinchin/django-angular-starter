@@ -5,7 +5,7 @@ ENV ANGULAR_VERSION=11
 # TODO: Figure out how to pass in versions through the ARG command and docker-compose.yml 
 #       used in conjunction.
 
-# MAKE APPLICATION
+# COPY APPLICATION REQUIREMENTS
 WORKDIR /home/
 RUN mkdir /app && mkdir /frontend && mkdir /scripts
 COPY /app/requirements.txt /home/app/requirements.txt

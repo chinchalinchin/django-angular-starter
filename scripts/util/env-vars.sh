@@ -2,8 +2,8 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 SCRIPT_NAME='env'
 source "$SCRIPT_DIR/logging.sh"
 
-# ARGUMENT: whatever environment you initializing. Must have a corresponding
-# .env file in the /env/ directory. 
+# ARGUMENT: whatever environment's env vars you initializing. Must have a 
+# corresponding .env file in the /env/ directory. 
 
 log "Checking \e[3m$1.env\e[0m File Configuration" $SCRIPT_NAME   
 if [ -f "$SCRIPT_DIR/../../env/$1.env" ]
