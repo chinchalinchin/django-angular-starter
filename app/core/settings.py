@@ -20,6 +20,7 @@ if APP_ENV == 'container':
 }
 elif APP_ENV == 'mcaas':
     # TODO: Configure mcaas database connection here, if desired
+    pass
 elif APP_ENV == 'local':
     # TODO: Configure local database connection here, if desired
     pass

@@ -30,11 +30,12 @@ class DebugLogger():
         self.logger.info("# Environment Configuration")
         self.logger.info('> APP_ENV: %s', config.APP_ENV)
         self.logger.info("-------------------------------------------------")
-        self.logger.info("# Database Configuration")
-        self.logger.info('> BACKEND: %s', config.DATABASES['default']['ENGINE'])
-        self.logger.info('> HOST: %s', config.DATABASES['default']['HOST'])
-        self.logger.info('> PORT: %s', config.DATABASES['default']['PORT'])
-        self.logger.info('> NAME: %s', config.DATABASES['default']['NAME'])
+        if config.APP_ENV == 'container':
+            self.logger.info("# Database Configuration")
+            self.logger.info('> BACKEND: %s', config.DATABASES['default']['ENGINE'])
+            self.logger.info('> HOST: %s', config.DATABASES['default']['HOST'])
+            self.logger.info('> PORT: %s', config.DATABASES['default']['PORT'])
+            self.logger.info('> NAME: %s', config.DATABASES['default']['NAME'])
 
 if __name__ == "__main__":
     logger = DebugLogger("debug.py")
