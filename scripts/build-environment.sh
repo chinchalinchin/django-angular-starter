@@ -14,19 +14,7 @@ then
     exit 0
 else
 
-    log 'Checking \e[3mlocal.env\e[0m File Configuration' $SCRIPT_NAM
-    if [ -f "$SCRIPT_DIR/../env/local.env" ]
-    then
-        set -o allexport
-        source $SCRIPT_DIR/../env/local.env
-        set +o allexport
-        log 'Environment Initialized'
-    else
-        touch $SCRIPT_DIR/../env/local.env
-        cp $SCRIPT_DIR/../env/.sample.env $SCRIPT_DIR/../env/local.env
-        log 'Please configure the \e[3mlocal.env\e[0m file and then re-invoke this script. See documentation for more information' $SCRIPT_NAME
-        exit 0
-    fi
+    source "$SCRIPT_DIR/util/local-env.sh"
 
     log 'Checking Node Installation' $SCRIPT_NAME
     if ! command -v node &> /dev/null
