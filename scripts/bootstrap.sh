@@ -29,7 +29,7 @@ else
     log 'Collecting Static Files' $SCRIPT_NAME
     python manage.py collectstatic --noinput
 
-    log 'Migrating Models to Database' $SCRIPT_NAME
+    log 'Migrating Models To Database' $SCRIPT_NAME
     python manage.py migrate
 
     log 'Debugging Django Settings' $SCRIPT_NAME
@@ -39,7 +39,7 @@ else
     #########################################################
     ## CONTAINER APPLICATION ENTRYPOINT
     #########################################################
-    log 'Binding WSGI App to Gunicorn On 0.0.0.0:8000' $SCRIPT_NAME 
+    log 'Binding WSGI App To Gunicorn On 0.0.0.0:8000' $SCRIPT_NAME 
     gunicorn core.wsgi:application --bind=0.0.0.0 --workers 3
     #########################################################
 

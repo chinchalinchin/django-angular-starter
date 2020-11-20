@@ -18,6 +18,8 @@ if APP_ENV == 'container':
         'PASSWORD': os.getenv('POSTGRES_PASSWORD')
     }
 }
+elif APP_ENV == 'mcaas':
+    # TODO: Configure mcaas database connection here, if desired
 elif APP_ENV == 'local':
     # TODO: Configure local database connection here, if desired
     pass
