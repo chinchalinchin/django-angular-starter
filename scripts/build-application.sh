@@ -16,7 +16,7 @@ then
     help "$SCRIPT_DES" $SCRIPT_NAME
     exit 0
 else
-    source "$SCRIPT_DIR/util/local-env.sh"
+    source "$SCRIPT_DIR/util/env-vars.sh" local
 
     cd $SCRIPT_DIR/../app/
     log "Navigating to Django Project Root: $(pwd)" $SCRIPT_NAME

@@ -14,7 +14,7 @@ then
     exit 0
 else
 
-    source "$SCRIPT_DIR/util/local-env.sh"
+    source "$SCRIPT_DIR/util/env-vars.sh" local
 
     log 'Checking Node Installation' $SCRIPT_NAME
     if ! command -v node &> /dev/null
