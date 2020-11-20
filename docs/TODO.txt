@@ -1,2 +1,0 @@
-TODO:
-1. Mount a volume in the Dockerfile, so you don't have to rebuild everytime you make changes to the code.
