@@ -4,7 +4,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 APP_ENV = os.environ.setdefault('ENVIRONMENT','local')
-SECRET_KEY = os.environ.setdefault('SECRET_KEY', 'xxxx')
+SECRET_KEY = os.environ.setdefault('SECRET_KEY', 'i46xk72z0=*c0kvx%0ll3v#&=1!4mw24ok&msmv(dh8c9wokpb')
 
 # Configure datasource here
 if APP_ENV == 'container':
@@ -24,9 +24,6 @@ elif APP_ENV == 'mcaas':
 elif APP_ENV == 'local':
     # TODO: Configure local database connection here, if desired
     pass
-
-
-SECRET_KEY = 'i46xk72z0=*c0kvx%0ll3v#&=1!4mw24ok&msmv(dh8c9wokpb'
 
 DEBUG = True
 
