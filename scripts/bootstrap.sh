@@ -24,8 +24,11 @@ else
     log 'Collecting Static Files' $SCRIPT_NAME
     python manage.py collectstatic --noinput
 
-    # log 'Migrating Models To Database' $SCRIPT_NAME
-    # python manage.py migrate
+    log 'Creating Django Model Migrations' $SCRIPT_NAME
+    python manage.py makemigrations
+
+    log 'Migrating Models To Database' $SCRIPT_NAME
+    python manage.py migrate
 
     log 'Debugging Django Settings' $SCRIPT_NAME
     python debug.py
