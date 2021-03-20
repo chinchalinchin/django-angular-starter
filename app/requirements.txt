@@ -10,4 +10,4 @@ psycopg2-binary==2.8.5
 requests==2.20.0
 django-cors-headers==3.4.0
 django-referrer-policy==1.0.0
-djangorestframework==3.11.0
+djangorestframework==3.11.2
